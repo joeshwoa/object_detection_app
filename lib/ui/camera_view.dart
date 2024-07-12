@@ -1,4 +1,4 @@
-import 'dart:io';
+/*import 'dart:io';*/
 import 'dart:isolate';
 
 import 'package:camera/camera.dart';
@@ -65,6 +65,7 @@ class _CameraViewState extends State<CameraView> with WidgetsBindingObserver {
     setState(() {
       isInitialized = true;
     });
+    widget.statsCallback(Stats());
   }
 
   /// Initializes the camera by setting [cameraController]
